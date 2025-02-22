@@ -1,13 +1,12 @@
-name: Every Minute Job
+name: Run Every Minute
 
 on:
- schedule:
-  - cron: '*/1 * * * *'
+  schedule:
+    - cron: '*/1 * * * *'
 
 jobs:
   every-minute-job:
-   runs-on: ubuntu-latest
-  
-   steps:
-    - name: run
-      run: echo '1 minute job'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log Time
+        run: echo "This job runs every minute! Current time: $(date)"
