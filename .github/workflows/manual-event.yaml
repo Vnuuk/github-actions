@@ -5,6 +5,7 @@ on:
 
 jobs:
   greet:
+    if: ${{ github.event.client_payload.name == 'Gosha' }}
     runs-on: ubuntu-latest
     steps:
       - name: Show Name
