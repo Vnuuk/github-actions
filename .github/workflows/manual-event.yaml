@@ -1,18 +1,11 @@
 name: API Trigger
 
 on:
-  workflow_dispatch:
-    inputs:
-      name:
-        description: "Name"
-        required: true
-        type: string
-
-  repository_dispatch: 
+  repository_dispatch:
 
 jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
       - name: Show Name
-        run: echo "${{ inputs.name }}"
+        run: echo "${{ github.event.client_payload.name }}"
