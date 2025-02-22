@@ -1,5 +1,3 @@
-name: Run Every Minute
-
 on:
   schedule:
     - cron: '*/1 * * * *'
@@ -9,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Log Time
-        run: echo "This job runs every minute! Current time: $(date)"
+        run: 'echo "This job runs every minute! Current time: $(date)"'
