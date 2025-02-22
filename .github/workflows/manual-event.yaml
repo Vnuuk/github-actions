@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show Name
-        run: echo "${{ github.event.client_payload.name }} and actor is ${{ github.actor }}"
+        run: |
+            echo ${{ github.event.client_payload.name }} and actor is ${{ github.actor }}"
+            echo Action = ${{github.action}}
