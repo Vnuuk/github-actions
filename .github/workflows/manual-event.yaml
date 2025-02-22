@@ -13,3 +13,4 @@ jobs:
             echo "Name ${{ github.event.client_payload.name }} and actor is ${{ github.actor }}"
             echo "Action = ${{github.action}}"
             echo "Owner/repo = $GITHUB_REPOSITORY"
+            echo "Dynamic Var = $DYNAMIC_VAR"
