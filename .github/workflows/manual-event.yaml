@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: Show Name
         run: |
-            echo ${{ github.event.client_payload.name }} and actor is ${{ github.actor }}"
-            echo Action = ${{github.action}}
+            echo "Name ${{ github.event.client_payload.name }} and actor is ${{ github.actor }}"
+            echo "Action = ${{github.action}}"
