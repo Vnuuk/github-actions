@@ -1,0 +1,15 @@
+name: API Trigger
+
+on:
+  workflow_dispatch:
+    inputs:
+      description: 'Name'
+      required: true
+      type: string
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Name
+        run: 'echo "${{ inputs.description }}"'
