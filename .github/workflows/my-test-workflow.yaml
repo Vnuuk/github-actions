@@ -8,4 +8,4 @@ jobs:
 
    steps:
     - name: Log the current time
-      run: echo "The time is $(date)"
+      run: echo "The time is $(date)!"
